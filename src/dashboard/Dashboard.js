@@ -6,7 +6,7 @@ import Controls from '../controls/Controls';
 class Dashboard extends React.Component {
   state = {
     locked: false,
-    closed: false,
+    closed: false
   };
 
   render() {
@@ -31,6 +31,7 @@ class Dashboard extends React.Component {
 
   toggleClosed = () => {
     this.setState(prev => ({ closed: !prev.closed }));
+    console.log('Dashboard.js toggleClosed Called');
   };
 }
 
