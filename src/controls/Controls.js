@@ -4,9 +4,9 @@ const Controls = props => {
   const { locked, closed, toggleLocked, toggleClosed } = props;
 
   return (
-    <div className='controls panel'>
+    <div data-testid='controls' className='controls panel'>
       <button
-        data-test='close-btn'
+        data-testid='close-btn'
         disabled={!closed}
         onClick={toggleLocked}
         className='toggle-btn'
@@ -14,7 +14,7 @@ const Controls = props => {
         {locked ? 'Unlock Gate' : 'Lock Gate'}
       </button>
       <button
-        data-test='lock-btn'
+        data-testid='lock-btn'
         disabled={locked}
         onClick={toggleClosed}
         className='toggle-btn'
